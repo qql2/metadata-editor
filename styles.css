@@ -1,8 +1,10 @@
-/*
-
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
-
-*/
+/* main.css */
+#container[data-v-3b3019ee] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#submit[data-v-3b3019ee] {
+  margin-top: 10px;
+}
