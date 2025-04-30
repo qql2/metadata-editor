@@ -1,7 +1,7 @@
 {
 	"id": "metadata-editor",
 	"name": "metadata-editor",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Edit metadata of obsidian notes.",
 	"author": "qql2",

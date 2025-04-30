@@ -2,7 +2,12 @@
 	<div id="container">
 		<h1>Set Metadata in batches</h1>
 		<h2>Target notes</h2>
-		<textarea v-model="rawFilePath" rows="10" cols="50"></textarea>
+		<textarea
+			v-model="rawFilePath"
+			placeholder="支持wiki或none样式的路径"
+			rows="10"
+			cols="50"
+		></textarea>
 		<h2>Metadata</h2>
 		<div>
 			key: <input type="text" v-model="key" /> value:
@@ -23,7 +28,10 @@ let key = ref(plugin.settings.keyHistory);
 let value = ref(plugin.settings.valueHistory);
 let isProcessing = ref(false);
 let notePaths = computed(() => {
-	return rawFilePath.value.split("\n").map((path) => path.trim());
+	return rawFilePath.value
+		.split("\n")
+		.map((path) => path.trim().replace(/^\[\[|\]\]$/g, ""))
+		.filter((p) => p);
 });
 watch(key, (cur) => {
 	plugin.settings.keyHistory = cur;

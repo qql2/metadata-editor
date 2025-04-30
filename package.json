@@ -1,6 +1,6 @@
 {
 	"name": "metadata-editor",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Edit metadata of obsidian notes.",
 	"main": "main.js",
 	"scripts": {
